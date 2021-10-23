@@ -1,0 +1,397 @@
+
+@charset "UTF-8";
+
+html{
+  font-size: 30px;
+}
+
+body{
+  /* 書体指定 */
+  /* font-family: 'Philosopher', serif; */
+  color: #2B2B2B;
+}
+
+a{
+  /* タグの傍線指定 */
+  color: #2B2B2B;
+  text-decoration: none;
+}
+
+.wrapper{
+  margin: 0 10%;
+}
+
+.page_header{
+  padding: 50px 0px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.page_header h1{
+  flex-wrap: wrap;
+  position: relative;
+  transition: all .2s;
+}
+
+.main_nav{
+  font-size: 60%;
+  font-weight: normal;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+
+.main_nav li{
+  padding: 0px 15px;
+  position: relative;
+}
+
+.main_nav li a:hover{
+  color: #305B95;
+  /* color: #0481A2; */
+}
+
+.main_nav li a::after{
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background:#305B95;
+  transition: all 0.3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+.main_nav li a:hover::after{
+  transform: scale(1, 1);
+}
+
+/* main */
+.page_top{
+  position: relative;
+}
+
+.title_container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20%;
+  width: 100%;
+  background-color: rgba(245,245,245,0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.title_container h1{
+  font-size: 200%;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.plofile_section{
+  height: 750px;
+  padding-top: 100px;
+  margin-top: 100px;
+}
+
+.plofile_section_catch{
+  height: 200px;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #305B95;
+  color: #fff;
+  font-size: 180%;
+}
+
+.plofile_section_catch h2{
+  font-weight: bolder;
+}
+
+.plofile_section_icon{
+  margin-top: 150px;
+  position: absolute;
+  right: 0px;
+  top: auto;
+  height: 150px;
+  width: 1050px;
+  padding: 30px 0px;
+  /* background-color: #E5E5E5; */
+  color: #2B2B2B;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plofile_section_icon_sentence{
+  position: absolute;
+  right: 0px;
+  font-weight: bold;
+  color: #305B95;
+}
+
+.plofile_section_icon_sentence p{
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 140%;
+  color: #2B2B2B;
+}
+
+.products_section{
+  height: 600px;
+  background-color: #f5f5f5;
+  color: #305B95;
+  font-size: 180%;
+}
+
+.section_catch{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.products_section_gallary{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product_item{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  line-height: 50px;
+  color: #2B2B2B;
+}
+
+.skills_section{
+  /* background-color: #2B2B2B; */
+  height: 800px;
+  color: #305B95;
+  font-size: 180%;
+}
+
+.skills_section p{
+  color: #2B2B2B;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 20px 40px;
+  line-height: 40px;
+  text-align: left;
+}
+
+.skills_section_container{
+  display: flex;
+  flex-direction: row;
+}
+
+.skills_section_item{
+  margin-top: 10px;
+}
+
+.skill_label{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.skill_label:before, .skill_label:after {
+  border-top: medium solid #D0D0D0;
+  content: "";
+  width: 100px;
+}
+
+.skill_label p{
+  font-size: 30px;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+
+.skill_box{
+  display: flex;
+  flex-direction: row;
+}
+
+.services_section{
+  height: 800px;
+  background-color: #f5f5f5;
+  color: #305B95;
+  font-size: 180%;
+}
+
+.services_section_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 100px;
+  color: #2B2B2B;
+}
+
+.service_item{
+  margin: 0 5%;
+}
+
+.service_item p{
+  font-size: 30px;
+  padding: 30px 0px;
+}
+
+.service_item ul{
+  padding-left: 20px;
+}
+
+.service_item li{
+  list-style-type: disc;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 5px 5px;
+}
+
+.contacts_section{
+  height: 1000px;
+  color: #305B95;
+  font-size: 180%;
+}
+
+.googleform{
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__copyright{
+  font-size: 50%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  border-top: 1px solid #dddddd;
+}
+
+#page_top{
+  position: fixed;
+  right: 0px;
+  bottom: 30px;
+  z-index: 2;
+  /*はじめは非表示*/
+  transform: translateY(100px);
+}
+
+#page_top a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #777;
+  border-radius: 10px;
+  width: 50px;
+  height: 40px;
+  padding-top: 10px;
+  color: #fff;
+  font-size:1rem;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+#page_top a:hover{
+  background: #305B95;
+  opacity: 1;
+}
+
+#page_top.UpMove{
+  animation: UpAnime 1s forwards;
+}
+
+@keyframes UpAnime{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#page_top.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime{
+  from{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+
+.slider img{
+  height: 600px;
+  width: auto;
+  margin: 0 10px;
+}
+
+/* .slider .slick-slide{
+  margin:0 10px;
+} */
+
+/* .slick-prev,
+.slick-next{
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  outline: none;
+  border-top: 2px solid #666;
+  border-right: 2px solid #666;
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev{
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next{
+  right: -1.5%;
+  transform: rotate(45deg);
+} */
+
+/* .slick-dots{
+  text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li{
+  display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width:8px;
+  height:8px;
+  display:block;
+  border-radius:50%;
+  background:#ccc;
+}
+
+.slick-dots .slick-active button{
+    background:#333;
+} */
